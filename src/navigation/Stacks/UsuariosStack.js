@@ -16,6 +16,7 @@ const UsuariosStack = ({ navigation, props }) => {
                         shadowColor: 'transparent',
                         backgroundColor: '#F28C0F',
                         height: hp(10),
+                        borderBottomWidth: 0
                     }],
                     headerTintColor: 'white',
                     headerTitleStyle: {
@@ -38,6 +39,7 @@ const UsuariosStack = ({ navigation, props }) => {
                         [styles.shadow, {
                             backgroundColor: '#F28C0F',
                             height: hp(10),
+                            borderBottomWidth: 0
                         }],
                     headerTintColor: 'white',
                     headerTitleStyle: {
@@ -57,6 +59,7 @@ const UsuariosStack = ({ navigation, props }) => {
                         shadowColor: 'transparent',
                         backgroundColor: '#F28C0F',
                         height: hp(10),
+                        borderBottomWidth: 0
                     }],
                     headerTintColor: 'white',
                     headerTitleStyle: {

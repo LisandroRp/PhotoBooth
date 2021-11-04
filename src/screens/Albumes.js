@@ -42,7 +42,6 @@ const App = (props) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFF7EE'
     },
     btn: {
         flex: 1,

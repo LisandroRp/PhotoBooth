@@ -15,6 +15,7 @@ const AlbumStack = ({ navigation, props }) => {
                     headerStyle: [styles.shadow, {
                         backgroundColor: '#F28C0F',
                         height: hp(10),
+                        borderBottomWidth: 0
                     }],
                     headerTintColor: 'white',
                     headerTitleStyle: {
@@ -37,6 +38,7 @@ const AlbumStack = ({ navigation, props }) => {
                     headerStyle: [styles.shadow, {
                         backgroundColor: '#F28C0F', 
                         height: hp(10),
+                        borderBottomWidth: 0
                     }],
                     headerTintColor: 'white', 
                     headerTitleStyle: {
@@ -56,6 +58,7 @@ const AlbumStack = ({ navigation, props }) => {
                     headerStyle: [styles.shadow, {
                         backgroundColor: '#F28C0F',
                         height: hp(10),
+                        borderBottomWidth: 0
                     }],
                     headerTintColor: 'white',
                     headerTitleStyle: {
@@ -75,6 +78,7 @@ const AlbumStack = ({ navigation, props }) => {
                         [styles.shadow, {
                             backgroundColor: '#F28C0F',
                             height: hp(10),
+                            borderBottomWidth: 0
                         }],
                     headerTintColor: 'white',
                     headerTitleStyle: {
@@ -94,6 +98,7 @@ const AlbumStack = ({ navigation, props }) => {
                         shadowColor: 'transparent',
                         backgroundColor: '#F28C0F',
                         height: hp(10),
+                        borderBottomWidth: 0
                     }],
                     headerTintColor: 'white',
                     headerTitleStyle: {

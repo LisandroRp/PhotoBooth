@@ -296,8 +296,7 @@ const renderCarouselItem = ({ item }) =>
 /> */}
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: '#FFF7EE'
+    ...StyleSheet.absoluteFillObject
   },
   safeArea: {
     backgroundColor: '#F28C0F',

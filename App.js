@@ -3,8 +3,7 @@ import { ThemeContext } from './src/components/ThemeContext';
 import { 
   Provider as PaperProvider, 
   DefaultTheme as PaperDefaultTheme,
-  DarkTheme as PaperDarkTheme,
-  useTheme 
+  DarkTheme as PaperDarkTheme
 } from 'react-native-paper';
 
 import { 
@@ -19,13 +18,7 @@ import UserDataManager from './src/screens/UserDataManager';
 import { PersistGate } from 'redux-persist/integration/react'
 
 UserDataManager.getInstance().setCurrentPositionFromReact()
-/* const App = props => (
-  <Provider store={store}>
-    <NavigationContainer>
-      <Drawer />
-    </NavigationContainer>
-  </Provider>
-) */
+
 function App() {
   const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
@@ -36,8 +29,7 @@ function App() {
       ...NavigationDefaultTheme.colors,
       ...PaperDefaultTheme.colors,
       background: '#FFF7EE',
-      text: '#333333',
-      fontWeight: 'bold',
+      text: 'white'
     }
   }
 
@@ -48,7 +40,7 @@ function App() {
       ...NavigationDarkTheme.colors,
       ...PaperDarkTheme.colors,
       background: '#333333',
-      text: '#ffffff'
+      text: 'black'
     }
   }
 

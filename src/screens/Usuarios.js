@@ -39,7 +39,7 @@ const App = (props) => {
 
     return (
         <View style={styles.container}>
-            <View style={{ backgroundColor: '#F28C0F' }}>
+            <View style={[styles.shadow, {backgroundColor: '#F28C0F'}]}>
                 <SearchBar
                     placeholder="Buscar..."
                     platform='ios'
@@ -80,8 +80,7 @@ const App = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#FFF7EE'
+        flex: 1
     },
 
     card: {

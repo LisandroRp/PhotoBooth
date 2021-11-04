@@ -102,8 +102,7 @@ const App = (props) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        backgroundColor: '#FFF7EE'
+        alignItems: 'center'
     },
     card: {
         flex: 1,
