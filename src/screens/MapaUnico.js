@@ -147,6 +147,7 @@ const App = (props) => {
     }
   }
   function changeTransporte(carousel, id_transporte) {
+    setIsLoadingData(true)
     switch (id_transporte) {
       case 1:
         ApiController.getRoad(carousel, "driving", okRoad.bind(this))
