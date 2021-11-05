@@ -39,7 +39,7 @@ const App = (props) => {
         return (
             <View style={styles.container}>
                 <View style={[styles.shadow, styles.imageContainer]}>
-                    <Image source={{ uri: "https://thispersondoesnotexist.com/image" }} style={[{ borderRadius: 10, width: wp(80), height: wp(80) }]} />
+                    <Image source={{ uri: "https://thispersondoesnotexist.com/image" }} style={[{ borderRadius: 10, width: wp(60), height: wp(60) }]} />
                 </View>
                 <View style={styles.content}>
                     <Text style={styles.name}>{usuario.name}</Text>
@@ -114,12 +114,12 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     name: {
-        fontSize: wp(8),
+        fontSize: wp(7),
         color: "#F28C0F",
         fontWeight: 'bold'
     },
     username: {
-        fontSize: wp(4.4),
+        fontSize: wp(4),
         color: "#A7370F",
         fontWeight: 'bold'
     },
@@ -133,13 +133,13 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     address: {
-        fontSize: wp(4.8),
+        fontSize: wp(4.4),
         color: "black",
         marginTop: hp(0.5),
         textDecorationLine: 'underline'
     },
     addressInfoTitle: {
-        fontSize: wp(4.4),
+        fontSize: wp(4),
         color: "black",
         marginTop: hp(0.5),
         textDecorationLine: 'underline'

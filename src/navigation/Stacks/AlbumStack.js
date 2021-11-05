@@ -20,7 +20,9 @@ const AlbumStack = ({ navigation, props }) => {
                     headerTintColor: 'white',
                     headerTitleStyle: {
                         fontWeight: 'bold',
-                        textAlign: "center" 
+                        textAlign: "left",
+                        fontSize: wp(4.4),
+                        paddingLeft: wp(10)
                     },
                     headerLeft: () => <Icon
                         style={{ paddingLeft: 10, color: "white" }}
@@ -43,7 +45,9 @@ const AlbumStack = ({ navigation, props }) => {
                     headerTintColor: 'white', 
                     headerTitleStyle: {
                         fontWeight: 'bold', 
-                        textAlign: "center"
+                        textAlign: "left",
+                        fontSize: wp(4.4),
+                        paddingLeft: wp(10)
                     },
                     headerTitleContainerStyle: {
                         width: wp(44)
@@ -63,7 +67,9 @@ const AlbumStack = ({ navigation, props }) => {
                     headerTintColor: 'white',
                     headerTitleStyle: {
                         fontWeight: 'bold',
-                        textAlign: "center"
+                        textAlign: "left",
+                        fontSize: wp(4.4),
+                        paddingLeft: wp(10)
                     },
                     headerTitleContainerStyle: {
                         width: wp(44),
@@ -83,7 +89,9 @@ const AlbumStack = ({ navigation, props }) => {
                     headerTintColor: 'white',
                     headerTitleStyle: {
                         fontWeight: 'bold',
-                        textAlign: "center"
+                        textAlign: "left",
+                        fontSize: wp(4.4),
+                        paddingLeft: wp(10)
                     },
                     headerTitleContainerStyle: {
                         width: wp(44),
@@ -94,23 +102,6 @@ const AlbumStack = ({ navigation, props }) => {
                 <Screen
                 options={{
                     headerShown: false,
-                    headerStyle: [{
-                        shadowColor: 'transparent',
-                        backgroundColor: '#F28C0F',
-                        height: hp(10),
-                        borderBottomWidth: 0
-                    }],
-                    headerTintColor: 'white',
-                    headerTitleStyle: {
-                        fontWeight: 'bold',
-                        textAlign: "center"
-                    },
-                    headerLeft: () => <Icon
-                        style={{ paddingLeft: 10, color: "white" }}
-                        onPress={() => navigation.openDrawer()}
-                        name="md-menu"
-                        size={wp(6.6)}
-                    />,
                     title: "Mapa"
                 }}
                 name="MapaUnicoScreen" component={MapaUnico} />

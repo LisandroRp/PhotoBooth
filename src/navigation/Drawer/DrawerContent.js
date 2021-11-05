@@ -95,14 +95,16 @@ const styles = StyleSheet.create({
         marginBottom: hp(1)
     },
     titleContainer: {
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingHorizontal: wp(5)
     },
     title: {
-        fontSize: 16,
+        fontSize: wp(4),
         marginTop: 3,
         fontWeight: 'bold',
         flexWrap: 'wrap',
-        color: 'white'
+        color: 'white',
+        textAlign: "center"
     },
     caption: {
         fontSize: 14,

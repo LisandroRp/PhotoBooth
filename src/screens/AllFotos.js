@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, Image, Animated, ActivityIndicator } from 'react-native'
-import { FlatList, TouchableOpacity } from 'react-native-gesture-handler'
+import { View, Text, StyleSheet, Image, Animated, ActivityIndicator, TouchableOpacity } from 'react-native'
+import { FlatList } from 'react-native-gesture-handler'
 import { FontAwesome, FontAwesome5, Entypo, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react/cjs/react.development'
@@ -13,7 +13,7 @@ const App = (props) => {
     const [startValue, setStartValue] = useState(new Animated.Value(0));
     const [endValue, setEndValue] = useState(1);
     const [duration, setDuration] = useState(500);
-    const [selectedImage, setSelectedImage] = useState("");
+    const [selectedImage, setSelectedImage] = useState(null);
     const [isAnimated, setIsAnimated] = useState(false);
 
     const { fotos } = useSelector(state => state.reducer);
@@ -25,8 +25,8 @@ const App = (props) => {
         fetchFotos();
     }, []);
 
-    function animate(selectedImage) {
-        setSelectedImage(selectedImage)
+    function animate(image) {
+        setSelectedImage(image)
         setIsAnimated(true);
         Animated.timing(startValue, {
             toValue: endValue,
@@ -60,8 +60,8 @@ const App = (props) => {
                 numColumns={2}
                 keyExtractor={item => item.id.toString()}
                 renderItem={({ index, item }) => (
-                    <TouchableOpacity style={[styles.card, styles.shadow, { marginTop: (index == 0 || index == 1) ? hp(1.1) : 0 }]} onPress={() => props.navigation.navigate('FotoEspecificaScreen', { id_foto: item.id, title: item.title, foto: item.url })}>
-                        <TouchableOpacity style={styles.cardImageContainer} onPress={() => { animate(item.url) }}>
+                    <TouchableOpacity style={[styles.card, styles.shadow, { marginTop: (index == 0 || index == 1) ? hp(1.1) : 0 }]} onPress={() => props.navigation.navigate('FotoEspecificaScreen', { id_foto: item.id, title: item.title, foto: item.thumbnailUrl })}>
+                        <TouchableOpacity style={styles.cardImageContainer} onPress={() => { animate(item.thumbnailUrl) }}>
                             <Image source={{ uri: item.thumbnailUrl }} style={[styles.image, { width: wp(33), height: wp(33) }]} />
                         </TouchableOpacity>
                         <View style={styles.cardContent}>
@@ -77,7 +77,13 @@ const App = (props) => {
                     style={styles.animatedIcon}
                     onPress={() => desAnimate()}
                 />
-                <Image source={{ uri: selectedImage }} style={[styles.animatedImage, { width: wp(80), height: wp(80) }]} />
+                {selectedImage ?
+                    <View style={{ width: wp(80), height: wp(80) }}>
+                        <Image source={{ uri: selectedImage }} style={[styles.animatedImage, { width: wp(80), height: wp(80) }]} />
+                    </View>
+                    :
+                    <View />
+                }
             </Animated.View>
         </View>
     )
@@ -87,7 +93,6 @@ const App = (props) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
     },
     card: {
         flex: 1,
@@ -129,6 +134,7 @@ const styles = StyleSheet.create({
         width: wp(100),
         height: hp(100),
         position: 'absolute',
+        alignItems: "center",
         top: hp(100)
     },
     animatedIcon: {

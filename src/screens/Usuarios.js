@@ -53,7 +53,7 @@ const App = (props) => {
                     searchIcon={{ color: 'rgba(0, 0, 0, 0.3)' }}
                 />
             </View>
-            {memory ?
+            {(memory && memory.length != 0) ?
                 <FlatList
                     data={memory}
                     keyExtractor={item => item.id.toString()}
@@ -140,8 +140,7 @@ const styles = StyleSheet.create({
             height: 3,
         },
         shadowOpacity: 0.8,
-        shadowRadius: 5,
-        elevation: 100
+        shadowRadius: 5
     }
 })
 

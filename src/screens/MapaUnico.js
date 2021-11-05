@@ -359,8 +359,7 @@ const styles = StyleSheet.create({
       height: 10,
     },
     shadowOpacity: 2,
-    shadowRadius: 8,
-    elevation: 55
+    shadowRadius: 8
   },
   //********************* */
   //CAROUSEL

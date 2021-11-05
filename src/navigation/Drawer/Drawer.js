@@ -28,9 +28,9 @@ const Drawer = props => {
                 headerShown: false,
                 /*drawerIcon: ({ color }) => (<Fontisto name="photograph" type="font-awesome" size={24} color={color} />),*/
                 title: ({ color }) => (
-                    <View style={{ flexDirection: "row", alignItems: "center" }}>
-                        <Icon style={{ flex: 0.15 }} name="book-open-page-variant" type="font-awesome" size={24} color={color} />
-                        <Text style={{ color: color, flex: 0.75, paddingLeft: wp(2) }}>Albumes</Text>
+                    <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                        <Icon style={{ flex: 0.15 }} name="book-open-page-variant" type="font-awesome" size={wp(6)} color={color} />
+                        <Text style={{ color: color, flex: 0.75 }}>Albumes</Text>
                     </View>
                 )
             }} name="AlbumesStack" component={AlbumStack}
@@ -42,9 +42,9 @@ const Drawer = props => {
                 headerShown: false,
                 /* drawerIcon: ({ color }) => (<Fontisto name="photograph" type="font-awesome" size={24} color={color}/>), */
                 title: ({ color }) => (
-                    <View style={{ flexDirection: "row", alignItems: "center" }}>
-                        <Fontisto style={{ flex: 0.15 }} name="photograph" type="font-awesome" size={24} color={color} />
-                        <Text style={{ color: color, flex: 0.75, paddingLeft: wp(2) }}>Fotos</Text>
+                    <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                        <Fontisto style={{ flex: 0.15 }} name="photograph" type="font-awesome" size={wp(6)} color={color} />
+                        <Text style={{ color: color, flex: 0.75 }}>Fotos</Text>
                     </View>
                 )
             }}
@@ -57,9 +57,9 @@ const Drawer = props => {
                 headerShown: false,
                 /* drawerIcon: ({ color }) => (<Fontisto name="photograph" type="font-awesome" size={24} color={color}/>), */
                 title: ({ color }) => (
-                    <View style={{ flexDirection: "row", alignItems: "center" }}>
-                        <FontAwesome5 style={{ flex: 0.15 }} name="users" type="font-awesome" size={24} color={color} />
-                        <Text style={{ color: color, flex: 0.75, paddingLeft: wp(2) }}>Usuarios</Text>
+                    <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                        <FontAwesome5 style={{ flex: 0.15 }} name="users" type="font-awesome" size={wp(6)} color={color} />
+                        <Text style={{ color: color, flex: 0.75 }}>Usuarios</Text>
                     </View>
                 )
             }}

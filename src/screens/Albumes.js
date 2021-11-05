@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         backgroundColor: "white",
         marginHorizontal: wp(2.2),
+        paddingHorizontal: wp(2)
     },
     title: {
         fontSize: wp(5),
